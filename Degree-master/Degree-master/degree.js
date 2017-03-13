@@ -11,15 +11,15 @@ let A = Matrix([
 function degree(mtrx,v){
   var sum=0;
   var degreelist= mtrx(v);
-  for(e=0;e<degreelist.length;e++){
+  for(let e=0;e<degreelist.length;e++){
     sum=sum+degreelist[e];
   }
   return sum
 }
 
 function degreecentrality(mtrx,v){
-  var neighbors=0;
-  
+  var neighbors= mtrx.size-1;
+  return degree(mtrx,v)/neighbors;
 }
 
 //Challenge
